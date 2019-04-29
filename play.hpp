@@ -9,7 +9,6 @@
 #include "Chooser.hpp"
 #include "Guesser.hpp"
 
-
 namespace bullpgia {
 	/**
 	 * Run a game of bull-pgia.

@@ -6,12 +6,11 @@
  */
 
 #include "play.hpp"
-#include <string>
 #include "calculate.hpp"
+#include <string>
 using std::string;
 
 namespace bullpgia {
-	
 	uint play(Chooser& chooser, Guesser& guesser, uint length, uint maxTurns) {
 		const uint TECHNICAL_VICTORY_TO_GUESSER = 0;
 		const uint TECHNICAL_VICTORY_TO_CHOOSER = maxTurns+1;

@@ -17,15 +17,7 @@ namespace bullpgia {
 		 friend ostream& operator<< (ostream& os, const Replay& c);
 	};
 	
-	
-	
-	Replay calculateBullAndPgia(const string& choice,const string& guess);
-	
-	
-	
-	
-	
-	
+	Replay calculateBullAndPgia(const string& choice,const string& guess);	
 }
 
 

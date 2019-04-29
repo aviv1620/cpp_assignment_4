@@ -28,8 +28,7 @@ namespace bullpgia {
 		
 		//deep copy the string
 		replay.choice = choice;
-		
-		
+				
 		//return
 		return replay;
 	}

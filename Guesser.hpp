@@ -8,8 +8,7 @@ namespace bullpgia{
 			virtual std::string guess() = 0;
 			
 			virtual void startNewGame(uint len){
-				length = len;
-				
+				length = len;				
 			}
 			
 			virtual void learn(Replay reply){}
