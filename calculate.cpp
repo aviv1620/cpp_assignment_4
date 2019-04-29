@@ -20,13 +20,17 @@ namespace bullpgia {
 		for(uint i=0; i < CL ;i++){
 			if(guess[i] == choice[i])//have Bull.
 				replay.bull++;
-			else if( choice.find(guess[i]) != string::npos){//have Pgia.
-			//else if( guess.find(choice[i]) != string::npos){//have Pgia.
+			else if( choice.find(guess[i]) != string::npos){//have Pgia.			
 				replay.pgia++;
 			}
 			
 		}
 		
+		//deep copy the string
+		replay.choice = choice;
+		
+		
+		//return
 		return replay;
 	}
 	

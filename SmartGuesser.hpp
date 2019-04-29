@@ -2,13 +2,12 @@
 
 
 class SmartGuesser: public bullpgia::Guesser {
+		string choice;
 	
-	public:string guess() override {
-		std::string r="";
-		for (uint i=0; i<this->length; ++i) {
-			char c = '0' + (rand()%10);
-			r += c;
-		}
-		return r;
-	}
+	public:
+		SmartGuesser(): choice("1234"){}
+		string guess() override;
+		void startNewGame(uint len) override;
+	
+		void learn(bullpgia::Replay reply) override;
 };

@@ -10,7 +10,7 @@ namespace bullpgia {
 	struct Replay{
 		uint bull;
 		uint pgia;
-				
+		string choice;	
 		Replay():bull(0),pgia(0){			
 		}
 		

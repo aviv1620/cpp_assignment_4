@@ -12,8 +12,7 @@ namespace bullpgia{
 				
 			}
 			
-			virtual void learn(Replay reply){
-			}
+			virtual void learn(Replay reply){}
 			
 		protected:
 			uint length;
