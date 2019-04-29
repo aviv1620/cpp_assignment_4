@@ -19,7 +19,7 @@ using namespace std;
 using namespace bullpgia;
 
 int main() {
-	
+
 	badkan::TestCase testcase;
 	int grade=0;
 	int signal = setjmp(badkan::longjmp_buffer);
@@ -68,9 +68,9 @@ int main() {
 		
 		//bull
 		testcase.setname("test bull");
-		testcase.CHECK_OUTPUT(calculateBullAndPgia("00","11"), "0,0");
-		testcase.CHECK_OUTPUT(calculateBullAndPgia("10","11"), "1,0");
-		testcase.CHECK_OUTPUT(calculateBullAndPgia("01","11"), "1,0");
+		testcase.CHECK_OUTPUT(calculateBullAndPgia("11","00"), "0,0");
+		testcase.CHECK_OUTPUT(calculateBullAndPgia("11","10"), "1,0");
+		testcase.CHECK_OUTPUT(calculateBullAndPgia("11","01"), "1,0");
 		testcase.CHECK_OUTPUT(calculateBullAndPgia("11","11"), "2,0");
 		ConstantChooser c11{"11"};
 		ConstantGuesser g11{"11"};
@@ -78,10 +78,10 @@ int main() {
 		
 		//Pgia
 		testcase.setname("test Pgia");
-		testcase.CHECK_OUTPUT(calculateBullAndPgia("11","12"), "1,1");
+		testcase.CHECK_OUTPUT(calculateBullAndPgia("12","11"), "1,1");
 		testcase.CHECK_OUTPUT(calculateBullAndPgia("12","12"), "2,0");
-		testcase.CHECK_OUTPUT(calculateBullAndPgia("21","12"), "0,2");
-		testcase.CHECK_OUTPUT(calculateBullAndPgia("22","12"), "1,0");
+		testcase.CHECK_OUTPUT(calculateBullAndPgia("12","21"), "0,2");
+		testcase.CHECK_OUTPUT(calculateBullAndPgia("12","22"), "1,1");
 		ConstantChooser c12{"12"};
 		ConstantGuesser g12{"12"};
 		testcase.CHECK_EQUAL(play(c12, g12, 2, 1), 1);	// guesser wins

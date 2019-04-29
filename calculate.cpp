@@ -7,7 +7,7 @@ namespace bullpgia {
 		return os;
 	}
 	
-	Replay calculateBullAndPgia(const string& choice,const string& guess){			
+	Replay calculateBullAndPgia(const string& choice,const string& guess){		
 		uint CL = choice.length(); // CL = choice length.
 		uint GL = guess.length(); // GL = guess length.
 		
@@ -18,11 +18,13 @@ namespace bullpgia {
 		Replay replay;
 		
 		for(uint i=0; i < CL ;i++){
-			//cout << choice[i] << " result " << choice.find(guess[i]) << endl;
 			if(guess[i] == choice[i])//have Bull.
 				replay.bull++;
-			else if( choice.find(guess[i]) != string::npos)//have Pgia. //have problem with digit 0;
+			else if( choice.find(guess[i]) != string::npos){//have Pgia.
+			//else if( guess.find(choice[i]) != string::npos){//have Pgia.
 				replay.pgia++;
+			}
+			
 		}
 		
 		return replay;
